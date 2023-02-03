@@ -1,0 +1,29 @@
+a=input("")
+b=[]
+nodes=["A1","A2","A3","A4","A5","R1"]
+if "ADD" in a:
+    if "COMPUTER" or "REPEATER " in a:
+        c=a.split()[-1]
+        if c not in b:
+            b.append(c)
+            print("Sucessfully added",c)
+        else:
+            print("Error:That name already exists.")
+else:
+    j=a.split()
+    if  len(j)!=3:
+        print("Error : Invalid command syntax")
+    else:
+        n=a[1:]
+        
+        if n[0]==n[1]:
+            print("Error: cannot connect the device to itself")
+        elif all( f in nodes for f in n):
+            print("Successfully connected")
+        else:
+            print("Error : Invalid command syntax")
+#if a=="INFO
+
+                
+
+#HALF EXECUTED USING PYTHON
